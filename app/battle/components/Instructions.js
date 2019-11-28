@@ -1,8 +1,10 @@
 import React from "react";
 import { FaUserFriends, FaFighterJet, FaTrophy } from "react-icons/fa";
 import PropTypes from "prop-types";
+import ThemeContext from "../../contexts/ThemeContext";
 
-export default function Instructions({ theme }) {
+export default function Instructions() {
+  const theme = React.useContext(ThemeContext);
   return (
     <div className="instructions-container">
       <h1 className="center-text header-lg">Instruction</h1>
@@ -31,7 +33,3 @@ export default function Instructions({ theme }) {
     </div>
   );
 }
-
-Instructions.propTypes = {
-  theme: PropTypes.string.isRequired
-};
